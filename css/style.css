@@ -1,5 +1,160 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 html, 
 body {
     margin: 0;
     padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "head"
+        "main"
+        "arti"
+        "foot";
+
+}
+
+/*  ===============
+        Header
+    =============== */
+
+header {
+    grid-area: head;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo, header nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.logo img {
+    height: 23px;
+    margin: 0.5rem
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+nav ul li {
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+
+/*  ===============
+        Main
+    =============== */
+
+
+main {
+    grid-area: main;
+    background: black url('../images/article-image-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    color: white;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1.25em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/*  ===============
+        Articles
+    =============== */
+
+#articles {
+    grid-area: arti;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.blog-heading {
+    margin: 0;
+    line-height: 1;
+}
+
+.view-more {
+    text-align: center;
+    
+}
+
+.view-more a {
+    color: black;
+    font-weight: bold;
+    text-transform: capitalize;    
+}
+
+/*  ===============
+        footer
+    =============== */
+
+footer {
+    grid-area: foot;
+    background-color: #202020;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 0.5;
+    padding: 1.5rem 0;
+}
+
+footer p:first-child {
+    color: #ECECEC;
+    font-weight: bold;
+    
+}
+
+footer p:last-child {
+    color: #D7D7D7
+}
+
+@media (min-width: 768px) {
+    #articles {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, 350px);
+    }
 }
