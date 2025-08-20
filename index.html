@@ -10,7 +10,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/image 17.png" />
-
+    <script type="module" src="script.js" async></script>
     <!-- Fonts -->
 
     <meta viewport="mobile" content="width=device-width, initial-scale=1">    
@@ -18,19 +18,21 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="header">
+        <!-- <a href="index.html">
         <div class="logo">
           <img src="images/image 17.png" alt="Logo image" />
           <p>My learning journal</p>
         </div>
+        </a>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>About me</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About me</a></li>
           </ul>
-        </nav>
+        </nav> -->
       </header>
-      <main>
+      <main class="homepage-main">
         <p class="subheading">July, 23, 2022</p>
         <h2>My new journey as a bootcamp student.</h2>
         <p>
@@ -40,47 +42,7 @@
         </p>
       </main>
       <section id="articles">
-        <article class="blog-post">
-          <img src="images/article-image-03.png" alt="" />
-          <p class="subheading">July 23, 2022</p>
-          <h3 class="blog-heading">Blog one</h3>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
-
-        <article class="blog-post">
-          <img src="images/article-image-02.png" alt="" />
-          <p class="subheading">July 23, 2022</p>
-          <h3 class="blog-heading">Blog one</h3>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
-
-        <article class="blog-post">
-          <img src="images/article-image-01.png" alt="" />
-          <p class="subheading">July 23, 2022</p>
-          <h3 class="blog-heading">Blog one</h3>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
-        <article class="view-more">
-            <a href="#">View more</a>
-        </article>
       </section>
-
-      <footer>
-        <p class="footer-name">My Learning Journal</p>
-        <p class="footer-copyright">Copyright ©2022</p>
-      </footer>
     </div>
   </body>
 </html>
