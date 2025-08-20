@@ -108,6 +108,30 @@ h3 {
     font-size: 0.8rem;
 }
 
+.about-me-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-me-intro {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.about-me-intro h3 {
+    margin: 0;
+    line-height: 1;
+
+}
+
+.about-me-content {
+    max-width: 600px;
+}
+
 /*  ===============
         Articles
     =============== */
@@ -194,5 +218,10 @@ footer p:last-child {
 
     .homepage-main {
         height: 500px;
+    }
+
+    .about-me-intro {
+        flex-direction: row;
+        margin-bottom: 3em;
     }
 }
